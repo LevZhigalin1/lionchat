@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +14,53 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#NavbarLogo {
+  height: 10vh;
+  pointer-events: none;
+}
+
+#Navbar{
+  background-color: #222222;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+} 
+
+#Nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#Nav li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #497fab;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+li a:hover {
+  background-color: #141414;
+}
+
+#ContentBox {
+  width:50%;
+  height: 90vh;
+  margin: 0 25%;
+  position: fixed;
+  background-color: #141414;
+}
+
+.text {
+  margin: 20% 20% 0 20%;
+  color: #497fab;
 }
