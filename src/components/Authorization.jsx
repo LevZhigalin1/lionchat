@@ -1,20 +1,16 @@
 import React from 'react'
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider }  from "../config-firebase.js"
 
 export default function Authorization(){
-    const provider = new GoogleAuthProvider();
-    const auth = getAuth();
-    signInWithPopup(auth, provider)
-    .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const userdata = result.user;
-        console.log(userdata);
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-    });
+
+    function signIn() {
+        signInWithPopup(auth, provider)
+    }
+
+    return (
+        <div>
+            <button onClick={signIn}>Google Log In</button>
+        </div>
+    )
 }

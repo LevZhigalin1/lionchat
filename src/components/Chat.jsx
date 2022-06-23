@@ -1,7 +1,11 @@
+import { signOut } from 'firebase/auth';
 import React from 'react'
+import { auth } from '../config-firebase';
 
 export default function Chat(){
     return(
-        <div>Чат</div>
+        <div>
+            <button onClick={() => signOut(auth)}>sign Out</button>
+        </div>
     );
 }

@@ -1,13 +1,24 @@
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from "../config-firebase.js"
 
 export default function Navbar() {
-  const user = false;
+  const navigation = useNavigate()
+  const [isAuth, setisAuth] = useState(false)
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setisAuth(user)
+    })
+    if(isAuth) return navigation("/Chat");
+    else return navigation("/Authorization");
+  }, [isAuth])
 
   return (
     <header id="Navbar">
       <img src={require('../images/NavbarLogo.png')} id="NavbarLogo" alt="for sell"/>
       <ul id="Nav">
-        {user ?
+        {isAuth ?
           <li><Link to="/Chat">Чат</Link></li>
           :
           <li><Link to="/Authorization">Авторизация</Link></li>
