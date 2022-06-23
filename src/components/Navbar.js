@@ -13,7 +13,7 @@ export default function Navbar() {
           <li><Link to="/Authorization">Авторизация</Link></li>
         }
         <li><Link to="/About">О сайте</Link></li>
-        <li><a href="https://www.youtube.com/">Исходники</a></li>
+        <li><a href="https://github.com/LevZhigalin1/lionchat">Исходники</a></li>
       </ul>
     </header>
   );
