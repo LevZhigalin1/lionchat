@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-  const user = firebase.auth().currentUser;
+  const user = false;
 
   return (
     <header id="Navbar">
