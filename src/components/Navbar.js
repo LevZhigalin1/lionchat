@@ -5,7 +5,7 @@ export default function Navbar() {
 
   return (
     <header id="Navbar">
-      <img src={require('./images/NavbarLogo.png')} id="NavbarLogo" alt="for sell"/>
+      <img src={require('../images/NavbarLogo.png')} id="NavbarLogo" alt="for sell"/>
       <ul id="Nav">
         {user ?
           <li><Link to="/Chat">Чат</Link></li>
