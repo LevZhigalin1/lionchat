@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function About(){
+export default function PageAbout(){
     return(
         <div className="text">
             <h1 style={{color: "darkblue"}}>О сайте</h1>

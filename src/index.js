@@ -1,11 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Navbar from './components/Navbar';
-import Authorization from './components/Authorization';
-import About from './components/About';
-import Chat from './components/Chat';
+import './css/index.css';
+import PageNotFound from './pages/PageNotfound';
+import Navbar from './pages/componets/Navbar';
+import PageAbout from './pages/PageAbout';
+import PageChat from './pages/PageChat';
+import PageProfile from './pages/PageProfile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,9 +14,10 @@ root.render(
     <Navbar/>
     <div id='ContentBox'>
       <Routes>
-        <Route path="/Authorization" element={<Authorization />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Chat" element={<Chat />} />
+        <Route path="/About" element={<PageAbout />} />
+        <Route path="/Chat" element={<PageChat />} />
+        <Route path="/Profile" element={<PageProfile />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </div>
   </BrowserRouter>
