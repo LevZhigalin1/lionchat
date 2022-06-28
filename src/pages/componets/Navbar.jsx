@@ -10,7 +10,7 @@ export default function Navbar() {
     <header id="Navbar">
       <img src={require('../../images/NavbarLogo.png')} id="NavbarLogo" alt="for sell"/>
       <ul id="Nav">
-        <li><Link to="/Chat">Чат</Link></li>
+        <li><Link to="/">Чат</Link></li>
         <li><Link to="/About">О сайте</Link></li>
         <li><a href="https://github.com/LevZhigalin1/lionchat">Исходники</a></li>
         {isAuth? <li><Link to="/Profile">Профиль</Link></li>:null}
