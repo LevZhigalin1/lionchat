@@ -22,12 +22,14 @@ export default function Chat() {
     }, [])
 
     const addMessage = () => {
-        addDoc(col, {
-            name: user.displayName,
-            text: text,
-            createdAt: serverTimestamp(),
-        })
-        setText("");
+        if(text !== ""){
+            addDoc(col, {
+                name: user.displayName,
+                text: text,
+                createdAt: serverTimestamp(),
+            })
+            setText("");
+        }
     }
 
     
