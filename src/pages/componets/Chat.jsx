@@ -28,7 +28,7 @@ export default function Chat() {
             createdAt: serverTimestamp(),
         })
         setText("");
-    }
+    }//await ага ждать, ждать чего отправки сообщения?
 
     
     return (
