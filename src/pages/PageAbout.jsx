@@ -4,7 +4,6 @@ export default function PageAbout(){
     return(
         <div className="text">
             <h1 style={{color: "darkblue"}}>О сайте</h1>
-
             <h2>
                 Этот сайт создан чисто из интереса и никому не принадлежит.<br/>
                 Он не несёт в себе цели:

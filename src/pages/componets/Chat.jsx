@@ -22,25 +22,15 @@ export default function Chat() {
     }, [])
 
     const addMessage = () => {
-<<<<<<< HEAD
         if(text !== ""){
             addDoc(col, {
-=======
-        if (text !== ""){
-            addDoc(collection(db,'messages'), {
->>>>>>> 97e5c4d33fb641d3c6c09da66cef6f4c1d5535e9
                 name: user.displayName,
                 text: text,
                 createdAt: serverTimestamp(),
             })
             setText("");
         }
-<<<<<<< HEAD
     }
-=======
-    }//await ага ждать, ждать чего отправки сообщения?
->>>>>>> 97e5c4d33fb641d3c6c09da66cef6f4c1d5535e9
-
     
     return (
         <div className="chat">
