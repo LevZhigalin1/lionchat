@@ -22,12 +22,14 @@ export default function Chat() {
     }, [])
 
     const addMessage = () => {
-        addDoc(collection(db,'messages'), {
-            name: user.displayName,
-            text: text,
-            createdAt: serverTimestamp(),
-        })
-        setText("");
+        if (text !== ""){
+            addDoc(collection(db,'messages'), {
+                name: user.displayName,
+                text: text,
+                createdAt: serverTimestamp(),
+            })
+            setText("");
+        }
     }//await ага ждать, ждать чего отправки сообщения?
 
     
