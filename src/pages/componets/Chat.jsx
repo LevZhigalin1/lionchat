@@ -1,7 +1,7 @@
 import React, { useState,  useEffect } from "react";
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
 import { db, auth } from "../../config-firebase.js";
-//import MessageBox from './MessageBox.jsx' пока не знаю как это сделать 
+import MessageBox from "./MessageBox.jsx";
 import MessageForm from "./MessageForm.jsx";
 
 export default function Chat() {
@@ -34,13 +34,7 @@ export default function Chat() {
     
     return (
         <div className="chat">
-            <div className="messages">
-                {UsersData?.map((user) => 
-                    <div key={user.id} className="message">
-                        <div>{user.name}: {user.text}</div>
-                    </div>
-                )}
-            </div>
+            {UsersData? <MessageBox UsersData={UsersData}/>:null}
             <MessageForm addMessage={addMessage} text={text} setText={setText} />
         </div>
     )

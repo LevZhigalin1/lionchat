@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export default function MessageBox(UsersData) {
+export default function MessageBox({UsersData}) {
   return (
-    <div className='messages'>
-      {UsersData?.map((user) => 
-        <div key={user.id}>
+    <div className="messages">
+      {UsersData.map((user) => 
+        <div key={user.id} className="message">
           <div>{user.name}: {user.text}</div>
-       </div>
+        </div>
       )}
     </div>
   )
