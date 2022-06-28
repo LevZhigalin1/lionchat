@@ -21,8 +21,8 @@ export default function Chat() {
         console.log(UsersData)
     }, [])
 
-    const addMessage = async() => {
-        await addDoc(collection(db,'messages'), {
+    const addMessage = () => {
+        addDoc(collection(db,'messages'), {
             name: user.displayName,
             text: text,
             createdAt: serverTimestamp(),
