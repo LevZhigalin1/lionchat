@@ -3,6 +3,7 @@ import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 
 import { db, auth } from "../../config-firebase.js";
 import MessageBox from "./MessageBox.jsx";
 import MessageForm from "./MessageForm.jsx";
+import "../../css/chat.css";
 
 export default function Chat() {
     const [text, setText] = useState('');

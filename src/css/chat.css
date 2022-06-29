@@ -1,0 +1,55 @@
+.chat{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.messages {
+    max-height: 82vh;
+    overflow-y: auto;
+}
+
+.message{
+    margin-top: 2vh;
+    min-height: auto;
+    overflow-wrap: break-word;
+}
+  
+.messageForm{
+    width: 100%;
+}
+
+.messageFormInput{
+    width: 89%;
+    height: 4vh;
+    margin-top: 2vh;
+    font-size: large;
+    background-color: #141414;
+    color: white;
+    border-radius: 10px;
+    resize: none;
+}
+
+.messageFormButton{
+    height:4vh;
+    border: 0;
+    padding: 0;
+    background-color: #141414;
+    margin-left: 1%;
+}
+
+.messageFormLogo{
+    height: 4vh;
+}
+
+::-webkit-scrollbar {
+    background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #222222;
+}
