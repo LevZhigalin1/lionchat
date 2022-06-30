@@ -4,7 +4,7 @@
 }
 
 .messages {
-    max-height: 82vh;
+    height: 82vh;
     overflow-y: auto;
 }
 

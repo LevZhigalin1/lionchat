@@ -23,15 +23,14 @@ export default function Chat() {
     }, [])
 
     const addMessage = () => {
-        if(text !== ""){
-            addDoc(col, {
-                name: user.displayName,
-                text: text,
-                createdAt: serverTimestamp(),
-            })
-            setText("");
-        }
+        addDoc(col, {
+            name: user.displayName,
+            text: text,
+            createdAt: serverTimestamp(),
+        })
+        setText("");
     }
+    
     
     return (
         <div className="chat">
