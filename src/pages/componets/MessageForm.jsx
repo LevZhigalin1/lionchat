@@ -9,7 +9,7 @@ export default function MessageForm({addMessage, text, setText}) {
         placeholder="Введите текст" 
         value={text} 
         onChange={e => setText(e.target.value)} 
-        onKeyPress={e => {if(e.key === "Enter") {e.preventDefault(); if(text !== "")  addMessage()}}}
+        onKeyPress={e => {if(e.key === "Enter") {e.preventDefault(); if(text !== "") {addMessage()}}}}
       />
       <button onClick={addMessage} className="messageFormButton">
         <img className="messageFormLogo" src={require('../../images/messageFormLogo.png')} alt="for sell" />
