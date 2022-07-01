@@ -14,10 +14,10 @@ root.render(
     <Navbar/>
     <div className="ContentBox">
       <Routes>
-        <Route path="/" element={<PageChat />} />
-        <Route path="/About" element={<PageAbout />} />
-        <Route path="/Profile" element={<PageProfile />} />
-        <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<PageChat />} />
+          <Route path="/About" element={<PageAbout />} />
+          <Route path="/Profile" element={<PageProfile />} />
+          <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   </BrowserRouter>

@@ -1,9 +1,10 @@
 import React, { useState,  useEffect } from "react";
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
-import { db, auth } from "../../config-firebase.js";
+import { auth, db } from "../../config-firebase.js";
 import MessageBox from "./MessageBox.jsx";
 import MessageForm from "./MessageForm.jsx";
 import "../../css/chat.css";
+
 
 export default function Chat() {
     const [text, setText] = useState('');
