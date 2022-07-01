@@ -43,6 +43,7 @@ img {
 }
 
 li a {
+  user-select: none;
   display: block;
   color: #497fab;
   text-align: center;
