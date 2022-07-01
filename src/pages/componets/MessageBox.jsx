@@ -4,7 +4,7 @@ export default function MessageBox({UsersData}) {
   const divRef = useRef(null);
 
   useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: 'smooth' });
+    divRef.current.scrollIntoView({});
   });
 
   return (
