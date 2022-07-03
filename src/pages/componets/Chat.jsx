@@ -28,6 +28,7 @@ export default function Chat() {
         if(text !== ""){
             addDoc(col, {
                 name: cook.get("nick"),
+                color: cook.get("color"),
                 text: text,
                 createdAt: serverTimestamp(),
             })
