@@ -4,6 +4,7 @@ import { auth, db } from "../../config-firebase.js";
 import MessageBox from "./MessageBox.jsx";
 import MessageForm from "./MessageForm.jsx";
 import "../../css/chat.css";
+import { Cookies } from "react-cookie";
 
 
 export default function Chat() {
@@ -12,6 +13,7 @@ export default function Chat() {
     const user = auth.currentUser;
     const col = collection(db, "messages");  
     const q = query(col, orderBy("createdAt"));
+    var cook = new Cookies
 
     useEffect(() => {
         const getData = async () => await onSnapshot(q, col, (doc) => {
@@ -25,7 +27,7 @@ export default function Chat() {
 
     const addMessage = () => {
         addDoc(col, {
-            name: user.displayName,
+            name: cook.get("nick"),
             text: text,
             createdAt: serverTimestamp(),
         })
