@@ -4,14 +4,12 @@ import { signOut } from "firebase/auth";
 
 
 export default function PageProfile() {
-  const user = auth.currentUser;
-  const [username, setUsername] = useState(user.displayName)
+  const [userName, setUsername] = useState(auth?.currentUser?.displayName)
 
   return (
     <div className="text">
-        <img src={user.photoURL} alt="for sell" />
         <h3>Имя пользователя:</h3>
-        <input placeholder={username} value={username} onChange={e => setUsername(e.target.value)} className="profileFormName" required/>
+        <input value={userName} onChange={e => setUsername(e.target.value)} className="profileFormName"/>
       <button onClick={() => signOut(auth)}>Выйти</button>
     </div>
   )
