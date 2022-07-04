@@ -12,7 +12,7 @@ export default function PageChat(){
             { isAuth ? 
                 <Chat />
                 :
-                <button onClick={() => signInWithPopup(auth, provider)}>Sign In</button>
+                <button onClick={() => signInWithPopup(auth, provider)}>Авторизация через Google</button>
             }
         </div>
     );

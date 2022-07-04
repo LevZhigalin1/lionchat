@@ -12,7 +12,7 @@ export default function Chat() {
     const [UsersData, setUsersData] = useState();
     const col = collection(db, "messages");  
     const q = query(col, orderBy("createdAt"));
-    var cook = new Cookies
+    var cook = new Cookies();
 
     useEffect(() => {
         const getData = async () => await onSnapshot(q, col, (doc) => {

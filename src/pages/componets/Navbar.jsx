@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { auth, user} from "../../config-firebase.js";
+import { auth } from "../../config-firebase.js";
 import useAuthState from "../../hooks/useAuthState.js";
 export default function Navbar() { 
-  const isAuth = useAuthState(auth)
+  const isAuth = useAuthState(auth);
+  const user = auth.currentUser;
 
   return (
     <header className="Navbar">

@@ -1,27 +1,28 @@
 import React, { useState } from "react";
-import { auth, user } from "../config-firebase.js";
+import { auth } from "../config-firebase.js";
 import { signOut } from "firebase/auth";
 import { useCookies } from "react-cookie";
 
 export default function PageProfile() {
+  const user = auth.currentUser;
   const [userName, setUserName] = useState(user.displayName);
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("#497fab");
   const [cookies, setCookie ] = useCookies();
 
   return (
     <div className="text">
-      <img src={user.photoURL} />
+      <img src={user.photoURL} alt="userPhoto"/>
       <h3>
         Имя пользователя: 
-        <input placeholder={cookies["nick"]} onChange={e => setUserName(e.target.value)} className="profileFormName"/>
+        <input  maxlength="25" placeholder={cookies["nick"]} onChange={e => setUserName(e.target.value)} className="profileFormName"/>
       </h3>
       <h3>
         Ваш пол:
-        <select value={gender} onChange={e => setGender(e.target.value)} className="profileFormGender">
-          <option value={"darkturquoise"}>не выбрано</option>
-          <option value={"darkblue"}>мужской</option>
-          <option value={"pink"}>женский</option>
-          <option value={"red"}>атакующий вертолёт(одобряем)</option> 
+        <select value={cookies["gender"]} onChange={e => setGender(e.target.value)} className="profileFormGender">
+          <option value={"#497fab"}>не выбрано</option>
+          <option value={"#1e50b3"}>мужской</option>
+          <option value={"#c586c0"}>женский</option>
+          <option value={"#da5250"}>атакующий вертолёт(одобряем)</option> 
         </select>
       </h3>
       <button onClick={() => {
