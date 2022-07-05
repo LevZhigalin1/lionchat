@@ -7,6 +7,7 @@ import Navbar from "./pages/componets/Navbar";
 import PageAbout from "./pages/PageAbout";
 import PageChat from "./pages/PageChat";
 import PageProfile from "./pages/PageProfile";
+alert("Внимание, мы используем файлы cookie и едим котят!");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

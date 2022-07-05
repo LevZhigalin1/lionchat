@@ -77,8 +77,14 @@ img {
 }
 
 .btn {
-  align-items: center;
   height: 3vh;
+  display: inline-flex;
+  align-items: center;
+  font-size: medium;
+}
+
+.btn:hover {
+  background-color: #222222;
 }
 
 .googleLogo{

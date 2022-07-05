@@ -25,11 +25,20 @@ export default function PageProfile() {
           <option value={"#da5250"}>атакующий вертолёт(одобряем)</option> 
         </select>
       </h3>
-      <button onClick={() => {
-        if(userName !== "") setCookie("nick", userName);
-        setCookie("color", gender);
-      }}>Сохранить изменения</button>
-      <button onClick={() => signOut(auth)}>Выйти</button>
+      <button 
+        className="btn"
+        onClick={() => {
+          if(userName !== "") setCookie("nick", userName);
+          setCookie("color", gender);
+        }}>Сохранить изменения
+      </button><br />
+      <button 
+        className="btn" 
+        style={{backgroundColor: "#da5250"}} 
+        onClick={() => {
+          if(window.confirm("Вы точно хотите выйти из учётной записи Google?")) signOut(auth);
+        }}>Выйти
+      </button>
     </div>
   )
 }
