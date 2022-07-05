@@ -12,7 +12,7 @@ export default function MessageBox({UsersData}) {
       {UsersData.map((user) => 
         <div key={user.id} className="message">
           <b className="messageName" style={{color: user.color, float:"left"}}>{user.name}:</b>
-          <div className="messageText" style={{color:"white"}}>{user.text}</div>
+          <div className="messageText">{user.text}</div>
         </div>
       )}
       <div ref={divRef} />

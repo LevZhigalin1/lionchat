@@ -14,11 +14,15 @@ export default function PageChat(){
             { isAuth ? 
                 <Chat />
                 :
-                <button onClick={() => 
-                    {signInWithPopup(auth, provider);
-                    setCookie("nick", "Инкогнито");
-                    setCookie("color", "#497fab");}
-                }>Авторизация через Google</button>
+                <div className="text">
+                    <button className="btn" onClick={() => 
+                        {signInWithPopup(auth, provider);
+                        setCookie("nick", "Инкогнито");
+                        setCookie("color", "#497fab");}}>
+                    <img className="googleLogo" src={require('../images/GoogleLogo.png')} alt="Logo" />
+                    Авторизация через Google
+                    </button>
+                </div>
             }
         </div>
     );

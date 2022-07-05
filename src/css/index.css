@@ -76,6 +76,15 @@ img {
   color: #497fab;
 }
 
+.btn {
+  align-items: center;
+  height: 3vh;
+}
+
+.googleLogo{
+  height: 3vh;
+}
+
 textarea::placeholder {
   user-select: none;
 }
