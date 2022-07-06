@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1200px) {
+
+    body,
+    .Nav li a,
+    .messageForm .messageFormInput,
+    input,
+    .btn {
+        font-size: 30px;
+    }
+
+    .profile{
+        right: 1%;
+    }
+
+    .ContentBox {
+        width: 100%;
+        margin: 0;
+    }
+
+    .NavbarLogo {
+        height: 6vh;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .text,
+    .chat {
+        width: 90%;
+        margin-left: 5%;
+    }
+}

@@ -63,6 +63,11 @@ img {
   background-color: #141414;
 }
 
+.profile{
+  position: absolute; 
+  right: 10%;
+}
+
 .ContentBox {
   width:50%;
   height: 90vh;

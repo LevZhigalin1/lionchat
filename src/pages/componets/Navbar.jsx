@@ -15,7 +15,7 @@ export default function Navbar() {
         <li><a href="https://github.com/LevZhigalin1/lionchat">Исходники</a></li>
       </ul>
       {isAuth?
-        <Link to="/Profile" style={{position: "absolute", right: "10%"}}>
+        <Link to="/Profile" className="profile">
           <img className="profileLogo" src={user.photoURL} />
         </Link>:null}
     </header>

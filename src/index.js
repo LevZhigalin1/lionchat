@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./css/index.css";
+import "./css/adaptation.css";
 import PageNotFound from "./pages/PageNotfound";
 import Navbar from "./pages/componets/Navbar";
 import PageAbout from "./pages/PageAbout";

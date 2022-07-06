@@ -35,7 +35,8 @@
 }
 
 .messageFormButton{
-    width: 5%;
+    width: 9%;
+    height: 4vh;
     border: 0;
     padding: 0;
     background-color: #141414;
