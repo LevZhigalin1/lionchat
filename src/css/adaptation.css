@@ -13,5 +13,17 @@
         height: 0;
     }
 
+    .Nav li a{
+        font-size: medium;
+    }
+
+    .text{
+        font-size: small;
+    }
+
+    .messageForm .messageFormButton{
+        width: 6%;
+    }
+
 }
 
